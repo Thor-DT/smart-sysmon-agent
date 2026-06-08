@@ -34,3 +34,16 @@
 2026-06-08 20:38:37,470 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
 2026-06-08 20:38:49,244 INFO OrionMon 
 [Shutdown] Orion-Mon closing down safely.
+2026-06-08 20:49:39,440 INFO OrionMon.Brain Gemini returned 1 verdict(s).
+2026-06-08 20:51:57,184 INFO OrionMon.Brain Gemini returned 1 verdict(s).
+2026-06-08 20:52:58,279 ERROR OrionMon GEMINI_API_KEY environment variable not found. Set GEMINI_API_KEY or enable DRY_RUN_MODE for safe testing.
+2026-06-08 20:53:07,137 INFO OrionMon ====================================================
+2026-06-08 20:53:07,138 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 20:53:07,138 INFO OrionMon  Checking loops every 2 seconds...
+2026-06-08 20:53:07,138 INFO OrionMon ====================================================
+
+2026-06-08 20:53:08,139 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:53:45,348 INFO OrionMon    System State: CPU: 46.3% | RAM: 87.6% | Free Disk: 34.0GB
+2026-06-08 20:53:45,348 INFO OrionMon    Found 2 candidate(s) crossing resource alerts.
+2026-06-08 20:53:45,348 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:53:47,349 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
