@@ -1,34 +1,35 @@
 @echo off
-REM Orion-Mon: Windows Service Setup Script
-REM This script creates a scheduled task to run the agent at startup
+REM Orion-Mon: Windows Service Installer
 
 echo ======================================
-echo Orion-Mon Service Setup
+echo Orion-Mon Windows Service Installer
 echo ======================================
 
-REM Get the full path to the project directory
 set PROJECT_DIR=%~dp0
+set SERVICE_SCRIPT=%PROJECT_DIR%service.py
+
 echo Project Directory: %PROJECT_DIR%
 
-REM Create the scheduled task
-echo Creating scheduled task...
-powershell -NoProfile -Command ^
-  "Register-ScheduledTask -TaskName 'OrionMon' -Action (New-ScheduledTaskAction -Execute 'python' -Argument '%PROJECT_DIR%main.py' -WorkingDirectory '%PROJECT_DIR%') -Trigger (New-ScheduledTaskTrigger -AtStartup) -Principal (New-ScheduledTaskPrincipal -UserId SYSTEM -LogonType ServiceAccount -RunLevel Highest) -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries) -Force"
-
-if %ERRORLEVEL% EQU 0 (
-    echo.
-    echo ✓ Task created successfully!
-    echo.
-    echo To start the agent now:
-    echo   schtasks /run /tn OrionMon
-    echo.
-    echo To stop the agent:
-    echo   taskkill /f /im python.exe /fi "CMDLINE*main.py"
-    echo.
-    echo To remove the task:
-    echo   Unregister-ScheduledTask -TaskName OrionMon -Confirm:$false
-) else (
-    echo ✗ Failed to create task. Make sure you run this as Administrator.
+if not exist "%SERVICE_SCRIPT%" (
+    echo ✗ Could not find service.py in the project directory.
+    goto end
 )
 
-pause
+echo Installing Orion-Mon service...
+python "%SERVICE_SCRIPT%" install
+if ERRORLEVEL 1 (
+    echo ✗ Service installation failed. Make sure you run this as Administrator and that pywin32 is installed.
+    goto end
+)
+
+echo.
+echo ✓ Orion-Mon service installed.
+echo.
+echo To start the service:
+echo   python "%SERVICE_SCRIPT%" start
+ echo To stop the service:
+ echo   python "%SERVICE_SCRIPT%" stop
+ echo To remove the service:
+ echo   python "%SERVICE_SCRIPT%" remove
+
+:end

@@ -7,8 +7,11 @@ import time
 import psutil
 
 import config
+import safelist
 from agent_brain import query_agent_brain
 from agent_effector import execute_agent_verdicts
+import agent_detector
+from brain_schema import AgentDecisionBatch, MitigationAction
 
 logger = logging.getLogger("OrionMon")
 logger.setLevel(config.LOG_LEVEL)
@@ -64,12 +67,20 @@ def scan_and_observe():
         try:
             pid = proc.info["pid"]
             name = proc.info["name"]
+
+            exe_path = None
+            try:
+                exe_path = proc.exe()
+            except Exception:
+                exe_path = None
+
             cpu = proc.cpu_percent(interval=None)
             mem = proc.memory_percent()
 
             if pid == os.getpid() or name is None or pid == 0:
                 continue
-            if name.lower() in config.SYSTEM_SAFELIST:
+            # Use enhanced safelist checks (name + optional binary hash) instead of fragile name-only checks
+            if safelist.is_safelisted(name, exe_path):
                 continue
 
             if cpu > config.MONITOR_CPU_THRESHOLD:
@@ -132,15 +143,31 @@ def main():
                 time.sleep(config.POLL_INTERVAL)
                 continue
 
-            logger.info("🧠 [Step 2: Think] Transmitting telemetry payload to Gemini Brain...")
-            try:
-                decisions = query_agent_brain(system_metrics, targets)
+            # Collect richer telemetry and run a fast local heuristic before calling the LLM
+            enriched = agent_detector.collect_enriched_telemetry(targets)
+            scores = agent_detector.local_heuristic(enriched, system_metrics)
 
-                logger.info("🛠️ [Step 3: Act] Routing decisions to local OS actuators...")
-                execute_agent_verdicts(decisions)
+            if not agent_detector.should_escalate(scores):
+                logger.info("🛡️ [Local Heuristic] No candidate exceeded escalation threshold; monitoring locally.")
+                # Build a conservative MONITOR-only decision batch and run the effector router (no termination)
+                local_batch = AgentDecisionBatch(
+                    verdict=[
+                        MitigationAction(action="MONITOR", pid=t["pid"], process_name=t.get("name") or t.get("process_name",""), reasoning="Local heuristic: low suspicion score.")
+                        for t in targets
+                    ]
+                )
+                execute_agent_verdicts(local_batch)
+            else:
+                logger.info("🧠 [Step 2: Think] Escalating suspicious targets to Gemini Brain...")
+                try:
+                    # send enriched telemetry to the LLM for higher-fidelity decisions
+                    decisions = query_agent_brain(system_metrics, enriched)
 
-            except Exception as api_err:
-                logger.error("   [API Error] Failed to compute decision tree: %s", api_err)
+                    logger.info("🛠️ [Step 3: Act] Routing decisions to local OS actuators...")
+                    execute_agent_verdicts(decisions)
+
+                except Exception as api_err:
+                    logger.error("   [API Error] Failed to compute decision tree: %s", api_err)
 
             time.sleep(config.POLL_INTERVAL)
 

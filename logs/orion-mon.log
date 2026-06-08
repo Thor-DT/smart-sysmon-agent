@@ -1,0 +1,36 @@
+2026-06-08 20:30:20,365 INFO OrionMon.Brain Gemini returned 1 verdict(s).
+2026-06-08 20:31:13,315 INFO OrionMon ====================================================
+2026-06-08 20:31:13,315 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 20:31:13,316 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 20:31:13,316 INFO OrionMon ====================================================
+
+2026-06-08 20:31:14,317 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:31:44,289 INFO OrionMon    System State: CPU: 77.2% | RAM: 90.3% | Free Disk: 34.4GB
+2026-06-08 20:31:44,290 INFO OrionMon    Found 3 candidate(s) crossing resource alerts.
+2026-06-08 20:31:44,290 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:32:14,291 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:32:41,553 INFO OrionMon    System State: CPU: 27.5% | RAM: 88.5% | Free Disk: 34.3GB
+2026-06-08 20:32:41,553 INFO OrionMon    Found 1 candidate(s) crossing resource alerts.
+2026-06-08 20:32:41,554 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:33:11,554 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:33:42,347 INFO OrionMon    System State: CPU: 34.4% | RAM: 89.1% | Free Disk: 34.2GB
+2026-06-08 20:33:42,347 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 20:33:42,347 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:34:12,348 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:34:43,601 INFO OrionMon    System State: CPU: 41.4% | RAM: 91.0% | Free Disk: 34.1GB
+2026-06-08 20:34:43,601 INFO OrionMon    Found 2 candidate(s) crossing resource alerts.
+2026-06-08 20:34:43,602 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:35:13,603 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:36:13,116 INFO OrionMon    System State: CPU: 62.8% | RAM: 94.3% | Free Disk: 34.1GB
+2026-06-08 20:36:13,116 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 20:36:13,117 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:36:43,117 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:37:29,231 INFO OrionMon    System State: CPU: 64.2% | RAM: 87.3% | Free Disk: 33.8GB
+2026-06-08 20:37:29,231 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 20:37:29,231 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:37:59,232 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 20:38:37,469 INFO OrionMon    System State: CPU: 42.0% | RAM: 87.1% | Free Disk: 33.8GB
+2026-06-08 20:38:37,470 INFO OrionMon    Found 1 candidate(s) crossing resource alerts.
+2026-06-08 20:38:37,470 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
+2026-06-08 20:38:49,244 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.

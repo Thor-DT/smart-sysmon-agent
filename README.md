@@ -83,33 +83,53 @@ Run the test suite with:
 pytest
 ```
 
+## New: Local Heuristic & Safelist Hashes
+
+- The agent now runs a lightweight local heuristic before calling the LLM. This reduces latency and avoids unnecessary external API calls for short-lived spikes.
+- You can provide a comma-separated list of trusted binary SHA256 hashes with the `SYSTEM_SAFELIST_HASHES` environment variable. Example:
+
+```powershell
+setx SYSTEM_SAFELIST_HASHES "<sha256-hex-1>,<sha256-hex-2>"
+```
+
+The safelist now prefers binary hashes over name-only checks for stronger assurance. Name checks are still used for compatibility but are weaker.
+
+## Tests added
+
+- `tests/test_safelist.py`: validates name- and hash-based safelist behavior.
+- `tests/test_agent_detector.py`: validates heuristic scoring and escalation logic.
+
 ## Deployment
 
 ### Windows Service (Auto-start)
 
+The agent now supports a real Windows service via `service.py`.
+
 Run as Administrator:
 
 ```powershell
-.\install_service.bat
+python .\service.py install
 ```
 
-This creates a Windows scheduled task that runs at startup with system privileges.
-
-**To start/stop the service manually:**
+To start the service:
 
 ```powershell
-# Source the service helpers
-. .\service.ps1
-
-# Start
-Start-OrionMon
-
-# Check status
-Get-OrionMonStatus
-
-# Stop
-Stop-OrionMon
+python .\service.py start
 ```
+
+To stop the service:
+
+```powershell
+python .\service.py stop
+```
+
+To remove the service:
+
+```powershell
+python .\service.py remove
+```
+
+If you prefer the older background helper scripts, `service.ps1` still provides simple Start/Stop/Status functions for a non-service agent instance.
 
 ### Logs
 
