@@ -1,4 +1,4 @@
-﻿import logging
+import logging
 import psutil
 
 import config
@@ -88,11 +88,25 @@ def handle_process_termination(pid: int, process_name: str):
             return
 
         if config.SAFE_MODE:
-            confirm = input(
-                f"\n❓ [SAFE MODE] Allow agent to terminate {process_name} (PID: {pid})? (y/n): "
-            )
-            if confirm.lower() != "y":
-                logger.info("➔ Status: Action manually cancelled by user.")
+            import sys
+            if not sys.stdin.isatty():
+                logger.warning(
+                    "➔ [Safety Block] Safe mode requires user confirmation, but stdin is not a TTY (running as background/service). Action automatically cancelled for safety."
+                )
+                return
+
+            try:
+                confirm = input(
+                    f"\n❓ [SAFE MODE] Allow agent to terminate {process_name} (PID: {pid})? (y/n): "
+                )
+                if confirm.lower() != "y":
+                    logger.info("➔ Status: Action manually cancelled by user.")
+                    return
+            except (EOFError, Exception) as input_err:
+                logger.error(
+                    "➔ [Safety Block] Safe mode confirmation failed due to non-interactive environment: %s. Action cancelled.",
+                    input_err
+                )
                 return
 
         logger.info("➔ Actuating: Sending termination signal to PID %d...", pid)

@@ -68,30 +68,33 @@ def scan_and_observe():
             pid = proc.info["pid"]
             name = proc.info["name"]
 
+            if pid == os.getpid() or name is None or pid == 0:
+                continue
+
+            cpu = proc.cpu_percent(interval=None)
+            if cpu <= config.MONITOR_CPU_THRESHOLD:
+                continue
+
             exe_path = None
             try:
                 exe_path = proc.exe()
             except Exception:
                 exe_path = None
 
-            cpu = proc.cpu_percent(interval=None)
             mem = proc.memory_percent()
 
-            if pid == os.getpid() or name is None or pid == 0:
-                continue
             # Use enhanced safelist checks (name + optional binary hash) instead of fragile name-only checks
             if safelist.is_safelisted(name, exe_path):
                 continue
 
-            if cpu > config.MONITOR_CPU_THRESHOLD:
-                heavy_candidates.append(
-                    {
-                        "pid": pid,
-                        "name": name,
-                        "cpu_percent": round(cpu, 1),
-                        "memory_percent": round(mem, 1),
-                    }
-                )
+            heavy_candidates.append(
+                {
+                    "pid": pid,
+                    "name": name,
+                    "cpu_percent": round(cpu, 1),
+                    "memory_percent": round(mem, 1),
+                }
+            )
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
 
