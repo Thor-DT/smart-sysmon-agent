@@ -22,6 +22,6 @@ DRY_RUN_MODE: Final[bool] = os.getenv("DRY_RUN_MODE", "false").strip().lower() i
 GEMINI_MODEL: Final[str] = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_API_KEY: Final[Optional[str]] = os.getenv("GEMINI_API_KEY")
 LOG_LEVEL: Final[str] = os.getenv("LOG_LEVEL", "INFO").upper()
-HEURISTIC_THRESHOLD: Final[float] = float(os.getenv("HEURISTIC_THRESHOLD", "0.6"))
+HEURISTIC_THRESHOLD: Final[float] = float(os.getenv("HEURISTIC_THRESHOLD", "0.5"))
 NETWORK_BYTES_SPIKE: Final[int] = int(os.getenv("NETWORK_BYTES_SPIKE", str(1024 * 50)))  # 50 KB
 IO_WRITE_SPIKE: Final[int] = int(os.getenv("IO_WRITE_SPIKE", str(1024 * 100)))  # 100 KB

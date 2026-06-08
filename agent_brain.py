@@ -8,10 +8,6 @@ from brain_schema import AgentDecisionBatch
 
 logger = logging.getLogger("OrionMon.Brain")
 logger.setLevel(config.LOG_LEVEL)
-if not logger.handlers:
-    handler = logging.StreamHandler()
-    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
-    logger.addHandler(handler)
 
 
 def query_agent_brain(system_metrics: dict, heavy_processes: list) -> AgentDecisionBatch:

@@ -91,3 +91,253 @@
 2026-06-08 21:08:02,743 WARNING OrionMon 🧪 [Dry Run] Skipping Gemini call and effector execution.
 2026-06-08 21:08:11,259 INFO OrionMon 
 [Shutdown] Orion-Mon closing down safely.
+2026-06-08 21:32:54,418 INFO OrionMon ====================================================
+2026-06-08 21:32:54,420 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 21:32:54,420 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 21:32:54,420 INFO OrionMon ====================================================
+
+2026-06-08 21:32:55,422 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:32:57,224 INFO OrionMon    System State: CPU: 22.8% | RAM: 87.0% | Free Disk: 33.9GB
+2026-06-08 21:32:57,224 INFO OrionMon    No suspicious background resource hogs found. Sleeping for 30s...
+2026-06-08 21:33:03,248 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
+2026-06-08 21:36:51,894 ERROR OrionMon GEMINI_API_KEY environment variable not found. Set GEMINI_API_KEY or enable DRY_RUN_MODE for safe testing.
+2026-06-08 21:37:10,647 ERROR OrionMon GEMINI_API_KEY environment variable not found. Set GEMINI_API_KEY or enable DRY_RUN_MODE for safe testing.
+2026-06-08 21:41:53,467 INFO OrionMon ====================================================
+2026-06-08 21:41:53,468 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 21:41:53,468 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 21:41:53,469 INFO OrionMon ====================================================
+
+2026-06-08 21:41:54,470 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:41:57,487 INFO OrionMon    System State: CPU: 15.6% | RAM: 89.1% | Free Disk: 34.1GB
+2026-06-08 21:41:57,487 INFO OrionMon    Found 2 candidate(s) crossing resource alerts.
+2026-06-08 21:41:58,756 INFO OrionMon 🧠 [Step 2: Think] Escalating suspicious targets to Gemini Brain...
+2026-06-08 21:42:07,591 INFO OrionMon.Brain Gemini returned 2 verdict(s).
+2026-06-08 21:42:07,593 INFO OrionMon 🛠️ [Step 3: Act] Routing decisions to local OS actuators...
+2026-06-08 21:42:07,594 INFO OrionMon.Effector ⚡ Processing 2 agent verdict(s)...
+2026-06-08 21:42:07,595 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:42:07,596 INFO OrionMon.Effector 📋 Target: Discord.exe (PID: 28580)
+2026-06-08 21:42:07,596 INFO OrionMon.Effector 🧠 Brain Reason: Discord.exe is consuming a high percentage of CPU (33.9%) for a background application. While not immediately malicious, this level of resource usage warrants monitoring, especially given the high global RAM utilization, to ensure it does not negatively impact overall system performance.
+2026-06-08 21:42:07,597 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:42:07,598 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:42:07,599 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:42:07,600 INFO OrionMon.Effector 📋 Target: Antigravity IDE.exe (PID: 9940)
+2026-06-08 21:42:07,600 INFO OrionMon.Effector 🧠 Brain Reason: Antigravity IDE.exe is consuming a significant amount of CPU (30.8%). However, as an Integrated Development Environment, high CPU usage is expected during active development, compilation, or indexing. The command line and child processes are consistent with normal IDE operation, indicating legitimate activity.
+2026-06-08 21:42:07,601 INFO OrionMon.Effector 🛠️ Action Recommended: ALLOW
+2026-06-08 21:42:07,602 INFO OrionMon.Effector ➔ Status: Permitted to run. Skipping intervention.
+2026-06-08 21:42:37,603 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:42:39,303 INFO OrionMon    System State: CPU: 11.9% | RAM: 89.2% | Free Disk: 34.1GB
+2026-06-08 21:42:39,303 INFO OrionMon    No suspicious background resource hogs found. Sleeping for 30s...
+2026-06-08 21:42:46,910 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
+2026-06-08 21:43:31,129 INFO OrionMon ====================================================
+2026-06-08 21:43:31,135 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 21:43:31,141 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 21:43:31,146 INFO OrionMon ====================================================
+
+2026-06-08 21:43:32,379 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:43:35,029 INFO OrionMon    System State: CPU: 100.0% | RAM: 92.0% | Free Disk: 34.1GB
+2026-06-08 21:43:35,039 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:43:35,285 INFO OrionMon 🛡️ [Local Heuristic] No candidate exceeded escalation threshold; monitoring locally.
+2026-06-08 21:43:35,297 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:43:35,300 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:43:35,301 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25284)
+2026-06-08 21:43:35,303 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:43:35,305 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:43:35,307 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:43:35,309 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:43:35,310 INFO OrionMon.Effector 📋 Target: python.exe (PID: 29288)
+2026-06-08 21:43:35,312 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:43:35,314 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:43:35,316 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:43:35,318 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:43:35,320 INFO OrionMon.Effector 📋 Target: python.exe (PID: 10544)
+2026-06-08 21:43:35,321 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:43:35,323 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:43:35,326 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:43:35,327 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:43:35,329 INFO OrionMon.Effector 📋 Target: python.exe (PID: 18148)
+2026-06-08 21:43:35,333 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:43:35,338 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:43:35,344 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:43:35,352 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:43:35,356 INFO OrionMon.Effector 📋 Target: python.exe (PID: 24364)
+2026-06-08 21:43:35,358 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:43:35,360 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:43:35,363 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:05,369 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:44:07,483 INFO OrionMon    System State: CPU: 100.0% | RAM: 89.5% | Free Disk: 34.1GB
+2026-06-08 21:44:07,486 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:44:07,702 INFO OrionMon 🛡️ [Local Heuristic] No candidate exceeded escalation threshold; monitoring locally.
+2026-06-08 21:44:07,704 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:44:07,711 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:44:07,717 INFO OrionMon.Effector 📋 Target: python.exe (PID: 26544)
+2026-06-08 21:44:07,722 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:44:07,727 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:44:07,734 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:07,739 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:44:07,743 INFO OrionMon.Effector 📋 Target: python.exe (PID: 18148)
+2026-06-08 21:44:07,748 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:44:07,753 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:44:07,759 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:07,765 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:44:07,771 INFO OrionMon.Effector 📋 Target: python.exe (PID: 5180)
+2026-06-08 21:44:07,777 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:44:07,785 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:44:07,791 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:07,797 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:44:07,801 INFO OrionMon.Effector 📋 Target: python.exe (PID: 15584)
+2026-06-08 21:44:07,805 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:44:07,809 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:44:07,814 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:07,820 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:44:07,827 INFO OrionMon.Effector 📋 Target: python.exe (PID: 2888)
+2026-06-08 21:44:07,832 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:44:07,910 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:44:07,926 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:44:11,489 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
+2026-06-08 21:45:05,426 INFO OrionMon ====================================================
+2026-06-08 21:45:05,427 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 21:45:05,429 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 21:45:05,431 INFO OrionMon ====================================================
+
+2026-06-08 21:45:06,463 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:45:08,376 INFO OrionMon    System State: CPU: 100.0% | RAM: 90.1% | Free Disk: 34.1GB
+2026-06-08 21:45:08,380 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:45:08,620 INFO OrionMon 🛡️ [Local Heuristic] No candidate exceeded escalation threshold; monitoring locally.
+2026-06-08 21:45:08,622 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:45:08,625 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:08,630 INFO OrionMon.Effector 📋 Target: python.exe (PID: 2888)
+2026-06-08 21:45:08,636 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:08,641 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:08,648 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:08,655 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:08,663 INFO OrionMon.Effector 📋 Target: python.exe (PID: 24364)
+2026-06-08 21:45:08,671 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:08,678 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:08,681 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:08,685 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:08,690 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25284)
+2026-06-08 21:45:08,694 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:08,698 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:08,703 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:08,707 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:08,713 INFO OrionMon.Effector 📋 Target: python.exe (PID: 15912)
+2026-06-08 21:45:08,719 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:08,724 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:08,729 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:08,733 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:08,739 INFO OrionMon.Effector 📋 Target: python.exe (PID: 18148)
+2026-06-08 21:45:08,743 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:08,747 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:08,751 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:38,757 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:45:40,831 INFO OrionMon    System State: CPU: 100.0% | RAM: 90.3% | Free Disk: 34.1GB
+2026-06-08 21:45:40,832 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:45:40,999 INFO OrionMon 🛡️ [Local Heuristic] No candidate exceeded escalation threshold; monitoring locally.
+2026-06-08 21:45:41,000 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:45:41,003 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:41,007 INFO OrionMon.Effector 📋 Target: python.exe (PID: 2888)
+2026-06-08 21:45:41,011 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:41,015 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:41,019 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:41,023 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:41,028 INFO OrionMon.Effector 📋 Target: python.exe (PID: 18148)
+2026-06-08 21:45:41,031 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:41,038 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:41,046 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:41,049 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:41,054 INFO OrionMon.Effector 📋 Target: python.exe (PID: 20912)
+2026-06-08 21:45:41,057 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:41,061 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:41,065 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:41,070 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:41,075 INFO OrionMon.Effector 📋 Target: python.exe (PID: 2724)
+2026-06-08 21:45:41,080 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:41,087 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:41,093 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:41,099 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:45:41,105 INFO OrionMon.Effector 📋 Target: python.exe (PID: 15584)
+2026-06-08 21:45:41,109 INFO OrionMon.Effector 🧠 Brain Reason: Local heuristic: low suspicion score.
+2026-06-08 21:45:41,114 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:45:41,117 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:45:48,067 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
+2026-06-08 21:49:31,576 INFO OrionMon.Brain Gemini returned 1 verdict(s).
+2026-06-08 21:53:54,579 INFO OrionMon ====================================================
+2026-06-08 21:53:54,582 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 21:53:54,584 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 21:53:54,586 INFO OrionMon ====================================================
+
+2026-06-08 21:53:55,607 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:53:57,697 INFO OrionMon    System State: CPU: 100.0% | RAM: 88.9% | Free Disk: 34.1GB
+2026-06-08 21:53:57,699 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:53:57,840 INFO OrionMon 🧠 [Step 2: Think] Escalating suspicious targets to Gemini Brain...
+2026-06-08 21:54:06,914 INFO OrionMon.Brain Gemini returned 5 verdict(s).
+2026-06-08 21:54:06,917 INFO OrionMon 🛠️ [Step 3: Act] Routing decisions to local OS actuators...
+2026-06-08 21:54:06,917 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:54:06,919 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:06,921 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25904)
+2026-06-08 21:54:06,922 INFO OrionMon.Effector 🧠 Brain Reason: High CPU utilization by a legitimate Python multiprocessing worker. Monitoring to ensure expected completion and resource release.
+2026-06-08 21:54:06,923 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:54:06,925 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:54:06,928 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:06,930 INFO OrionMon.Effector 📋 Target: python.exe (PID: 31756)
+2026-06-08 21:54:06,931 INFO OrionMon.Effector 🧠 Brain Reason: High CPU utilization by a legitimate Python multiprocessing worker. Monitoring to ensure expected completion and resource release.
+2026-06-08 21:54:06,933 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:54:06,935 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:54:06,938 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:06,939 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25576)
+2026-06-08 21:54:06,942 INFO OrionMon.Effector 🧠 Brain Reason: High CPU utilization by a legitimate Python multiprocessing worker. Monitoring to ensure expected completion and resource release.
+2026-06-08 21:54:06,944 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:54:06,946 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:54:06,947 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:06,949 INFO OrionMon.Effector 📋 Target: python.exe (PID: 7620)
+2026-06-08 21:54:06,951 INFO OrionMon.Effector 🧠 Brain Reason: High CPU utilization by a legitimate Python multiprocessing worker. Monitoring to ensure expected completion and resource release.
+2026-06-08 21:54:06,952 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:54:06,953 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:54:06,955 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:06,955 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25368)
+2026-06-08 21:54:06,956 INFO OrionMon.Effector 🧠 Brain Reason: High CPU utilization by a legitimate Python multiprocessing worker. Monitoring to ensure expected completion and resource release.
+2026-06-08 21:54:06,956 INFO OrionMon.Effector 🛠️ Action Recommended: MONITOR
+2026-06-08 21:54:06,957 INFO OrionMon.Effector ➔ Status: Logged for observation. No actions taken yet.
+2026-06-08 21:54:36,959 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 21:54:40,114 INFO OrionMon    System State: CPU: 100.0% | RAM: 88.9% | Free Disk: 34.1GB
+2026-06-08 21:54:40,115 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 21:54:40,265 INFO OrionMon 🧠 [Step 2: Think] Escalating suspicious targets to Gemini Brain...
+2026-06-08 21:54:55,989 INFO OrionMon.Brain Gemini returned 5 verdict(s).
+2026-06-08 21:54:55,991 INFO OrionMon 🛠️ [Step 3: Act] Routing decisions to local OS actuators...
+2026-06-08 21:54:55,992 INFO OrionMon.Effector ⚡ Processing 5 agent verdict(s)...
+2026-06-08 21:54:55,992 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:55,993 INFO OrionMon.Effector 📋 Target: python.exe (PID: 29504)
+2026-06-08 21:54:55,994 INFO OrionMon.Effector 🧠 Brain Reason: This process, along with its siblings, is contributing to 100% global CPU utilization, indicating a rogue or runaway multiprocessing workload that is saturating system resources and potentially causing unresponsiveness.
+2026-06-08 21:54:55,994 INFO OrionMon.Effector 🛠️ Action Recommended: TERMINATE
+2026-06-08 21:54:56,095 INFO OrionMon.Effector ➔ Actuating: Sending termination signal to PID 29504...
+2026-06-08 21:54:56,096 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
+2026-06-08 21:54:56,097 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:56,098 INFO OrionMon.Effector 📋 Target: python.exe (PID: 31756)
+2026-06-08 21:54:56,099 INFO OrionMon.Effector 🧠 Brain Reason: This process, along with its siblings, is contributing to 100% global CPU utilization, indicating a rogue or runaway multiprocessing workload that is saturating system resources and potentially causing unresponsiveness.
+2026-06-08 21:54:56,100 INFO OrionMon.Effector 🛠️ Action Recommended: TERMINATE
+2026-06-08 21:54:56,202 INFO OrionMon.Effector ➔ Actuating: Sending termination signal to PID 31756...
+2026-06-08 21:54:56,203 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
+2026-06-08 21:54:56,204 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:56,204 INFO OrionMon.Effector 📋 Target: python.exe (PID: 11912)
+2026-06-08 21:54:56,206 INFO OrionMon.Effector 🧠 Brain Reason: This process, along with its siblings, is contributing to 100% global CPU utilization, indicating a rogue or runaway multiprocessing workload that is saturating system resources and potentially causing unresponsiveness.
+2026-06-08 21:54:56,207 INFO OrionMon.Effector 🛠️ Action Recommended: TERMINATE
+2026-06-08 21:54:56,314 INFO OrionMon.Effector ➔ Actuating: Sending termination signal to PID 11912...
+2026-06-08 21:54:56,323 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
+2026-06-08 21:54:56,326 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:56,328 INFO OrionMon.Effector 📋 Target: python.exe (PID: 25904)
+2026-06-08 21:54:56,329 INFO OrionMon.Effector 🧠 Brain Reason: This process, along with its siblings, is contributing to 100% global CPU utilization, indicating a rogue or runaway multiprocessing workload that is saturating system resources and potentially causing unresponsiveness.
+2026-06-08 21:54:56,330 INFO OrionMon.Effector 🛠️ Action Recommended: TERMINATE
+2026-06-08 21:54:56,432 INFO OrionMon.Effector ➔ Actuating: Sending termination signal to PID 25904...
+2026-06-08 21:54:56,432 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
+2026-06-08 21:54:56,432 INFO OrionMon.Effector ------------------------------------------------
+2026-06-08 21:54:56,433 INFO OrionMon.Effector 📋 Target: python.exe (PID: 16312)
+2026-06-08 21:54:56,433 INFO OrionMon.Effector 🧠 Brain Reason: This process, along with its siblings, is contributing to 100% global CPU utilization, indicating a rogue or runaway multiprocessing workload that is saturating system resources and potentially causing unresponsiveness.
+2026-06-08 21:54:56,434 INFO OrionMon.Effector 🛠️ Action Recommended: TERMINATE
+2026-06-08 21:54:56,535 INFO OrionMon.Effector ➔ Actuating: Sending termination signal to PID 16312...
+2026-06-08 21:54:56,535 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
+2026-06-08 21:55:07,510 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
