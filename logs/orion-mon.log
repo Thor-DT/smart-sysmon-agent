@@ -341,3 +341,18 @@
 2026-06-08 21:54:56,535 INFO OrionMon.Effector ✓ Success: python.exe has been gracefully terminated.
 2026-06-08 21:55:07,510 INFO OrionMon 
 [Shutdown] Orion-Mon closing down safely.
+2026-06-08 22:03:26,360 INFO OrionMon ====================================================
+2026-06-08 22:03:26,361 INFO OrionMon  Orion-Mon: LLM-Powered Autonomous System Admin Active
+2026-06-08 22:03:26,361 INFO OrionMon  Checking loops every 30 seconds...
+2026-06-08 22:03:26,361 INFO OrionMon ====================================================
+
+2026-06-08 22:03:27,362 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 22:03:29,167 INFO OrionMon    System State: CPU: 15.2% | RAM: 86.3% | Free Disk: 34.1GB
+2026-06-08 22:03:29,167 INFO OrionMon    No suspicious background resource hogs found. Sleeping for 30s...
+2026-06-08 22:03:59,169 INFO OrionMon 🔍 [Step 1: Observe] Scanning active operating system states...
+2026-06-08 22:04:01,086 INFO OrionMon    System State: CPU: 82.5% | RAM: 87.8% | Free Disk: 34.1GB
+2026-06-08 22:04:01,087 INFO OrionMon    Found 5 candidate(s) crossing resource alerts.
+2026-06-08 22:04:01,243 INFO OrionMon 🧠 [Step 2: Think] Escalating suspicious targets to Gemini Brain...
+2026-06-08 22:04:08,715 ERROR OrionMon    [API Error] Failed to compute decision tree: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-08 22:04:26,916 INFO OrionMon 
+[Shutdown] Orion-Mon closing down safely.
