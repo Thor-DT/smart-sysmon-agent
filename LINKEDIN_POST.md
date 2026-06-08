@@ -27,7 +27,7 @@ I've built an autonomous system administration tool that uses Google Gemini LLM 
 
 🛠️ Built with: Python, Google Gemini API, psutil, Pydantic
 
-📂 GitHub: [YOUR_GITHUB_URL]
+📂 GitHub: [https://github.com/Thor-DT/smart-sysmon-agent]
 💬 Open source & MIT licensed - contributions welcome!
 
 #AI #SystemAdministration #AutomationTools #LLM #Windows #Cybersecurity #OpenSource
