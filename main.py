@@ -2,6 +2,7 @@ import logging
 import logging.handlers
 import os
 import sys
+import io
 import time
 import psutil
 
@@ -12,6 +13,12 @@ from agent_effector import execute_agent_verdicts
 logger = logging.getLogger("OrionMon")
 logger.setLevel(config.LOG_LEVEL)
 if not logger.handlers:
+    # Wrap stdout with UTF-8 encoding to support emoji characters
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    else:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
+    
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
     logger.addHandler(handler)
@@ -22,7 +29,8 @@ if not logger.handlers:
     file_handler = logging.handlers.RotatingFileHandler(
         os.path.join(log_dir, "orion-mon.log"),
         maxBytes=10 * 1024 * 1024,  # 10 MB
-        backupCount=5
+        backupCount=5,
+        encoding='utf-8'
     )
     file_handler.setFormatter(logging.Formatter(
         "%(asctime)s %(levelname)s %(name)s %(message)s"
